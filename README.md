@@ -16,12 +16,6 @@ We believe that learning to build robots and AI should feel like a superpower. B
 - **Computer Vision:** Teaching your robot to see!
 - **Your Grand Invention:** Combining hardware and AI to solve real-world problems.
 
-## Tech Stack
-- **Framework:** React + Vite
-- **Styling:** Tailwind CSS
-- **Animations:** Framer Motion
-- **Smooth Scrolling:** Lenis
-
 ## How It Works
 BuildRoom is a 100% web-based educational platform. There is no software to download or install! 
 
