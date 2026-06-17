@@ -46,15 +46,14 @@ export function Footer() {
             </div>
 
             <div>
-              <h4 className="font-mono text-xs text-muted-technical uppercase tracking-widest mb-6">Connect</h4>
+              <h4 className="font-mono text-xs text-muted-technical uppercase tracking-widest mb-6">Contributors</h4>
               <ul className="space-y-4">
-                {["Twitter", "GitHub", "Discord"].map((label) => (
-                  <li key={label}>
-                    <span className="font-body text-lg text-ink/40 cursor-not-allowed">
-                      {label}
-                    </span>
-                  </li>
-                ))}
+                <li>
+                  <a href="https://www.linkedin.com/in/arnav" target="_blank" rel="noreferrer" className="font-body text-lg text-ink/70 hover:text-accent transition-colors duration-300 flex items-center gap-2">
+                    Arnav Eluri
+                    <span className="text-sm opacity-50">↗</span>
+                  </a>
+                </li>
               </ul>
             </div>
           </div>

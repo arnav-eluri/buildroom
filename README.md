@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 BuildRoom
 
-## Getting Started
+**BuildRoom** is an interactive, beginner-friendly learning platform designed to introduce young builders to the exciting world of AI and Hardware.
 
-First, run the development server:
+<div align="center">
+  <img src="./public/logo.png" alt="BuildRoom Logo" width="200" />
+</div>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🌟 The Adventure Awaits
+We believe that learning to build robots and AI should feel like a superpower. BuildRoom takes you on a guided journey through:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- 🤖 **Finding Your Spark:** Why creating smart machines is like having a superpower.
+- 🧠 **Intro to AI:** How computers "think" and learn from patterns.
+- ⚡ **Hardware 101:** Brains, wires, sensors, and motors.
+- 🛠️ **Smart Bots:** Building your first robot that can sense its surroundings.
+- 👁️ **Computer Vision:** Teaching your robot to see!
+- 🚀 **Your Grand Invention:** Combining hardware and AI to solve real-world problems.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 💻 Tech Stack
+- **Framework:** React + Vite
+- **Styling:** Tailwind CSS
+- **Animations:** Framer Motion
+- **Smooth Scrolling:** Lenis
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🏃‍♂️ Getting Started
+To run BuildRoom locally on your machine:
 
-## Learn More
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+2. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🤝 Contributors
+Designed and built with ❤️ by **Arnav**.
+- [Connect on LinkedIn](https://www.linkedin.com/in/arnav)
