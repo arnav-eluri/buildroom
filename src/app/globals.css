@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors - Simple Tech Learning Palette */
+  --color-background: #0F0F0F;
+  --color-on-background: #F1EDE5;
+  --color-primary: #B23400;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #8C2800; /* Darker orange */
+  --color-on-primary-container: #fffcff;
+  
+  --color-surface: #151515;
+  --color-surface-dim: #1a1a1a;
+  --color-surface-variant: #222222;
+  --color-on-surface: #F1EDE5;
+  --color-on-surface-variant: #A0A0A0;
+  
+  --color-outline: #333333;
+  --color-outline-variant: #444444;
+  
+  --color-ink: #F1EDE5;
+  --color-accent: #B23400;
+  --color-muted-technical: #888888;
+  
+  /* Typography */
+  --font-heading: "Bebas Neue", sans-serif;
+  --font-body: "Hanken Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  /* Radii - Strictly Sharp */
+  --radius-none: 0px;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --radius-2xl: 0px;
+  --radius-full: 0px;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    border-radius: 0 !important; /* Force sharp corners everywhere */
+  }
+  
+  html {
+    scroll-behavior: auto;
+    background-color: var(--color-background);
+  }
+  
+  body {
+    background-color: var(--color-background);
+    color: var(--color-on-background);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+    min-height: 100vh;
+    position: relative;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    line-height: 1;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-8 py-3 bg-accent text-white font-heading text-xl uppercase tracking-wider transition-all duration-200 border-2 border-ink;
+    box-shadow: 4px 4px 0px var(--color-ink);
+  }
+  
+  .btn-primary:hover {
+    @apply bg-primary;
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px var(--color-ink);
+  }
+
+  .btn-primary:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px var(--color-ink);
+  }
+
+  .btn-secondary {
+    @apply px-8 py-3 bg-transparent text-ink font-mono text-sm uppercase tracking-widest transition-all duration-200 border-2 border-ink;
+  }
+  
+  .btn-secondary:hover {
+    @apply bg-surface-variant;
+  }
+
+  .btn-secondary:active {
+    transform: scale(0.98);
+  }
+
+  .card-brutal {
+    @apply bg-background border-2 border-ink p-6 transition-all duration-200;
+  }
+
+  .viewfinder-label {
+    @apply font-mono text-[10px] uppercase tracking-[0.3em] text-muted-technical border border-ink/10 px-2 py-0.5 inline-block;
+  }
+
+  .scanline {
+    width: 100%;
+    height: 1px;
+    z-index: 99;
+    background: rgba(0, 0, 0, 0.1);
+    opacity: 0.1;
+    position: fixed;
+    bottom: 100%;
+    animation: scanline 8s linear infinite;
+    pointer-events: none;
+  }
+
+  .vignette {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    pointer-events: none;
+    background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.15) 100%);
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-ink);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+/* Selection */
+::selection {
+  background: var(--color-accent);
+  color: var(--color-on-primary);
+}
+
+@keyframes scanline {
+  0% { bottom: 100%; }
+  100% { bottom: 0%; }
+}
+
+/* Removed film flicker animation and pseudo element */
