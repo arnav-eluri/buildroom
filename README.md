@@ -4,7 +4,7 @@
 **BuildRoom** is an interactive, beginner-friendly learning platform designed to introduce young builders to the exciting world of AI and Software.
 
 <div align="center">
-  <img src="./public/banner.png" alt="BuildRoom Logo" width="200" />
+  <img src="./public/banner.png" alt="BuildRoom Logo" width="100%" />
 </div>
 
 ## The Adventure Awaits
