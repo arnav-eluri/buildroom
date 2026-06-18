@@ -3,15 +3,15 @@ import { ModuleCard } from "./ModuleCard"
 const MODULES = [
   {
     id: "01",
-    title: "Why Build Robots & AI? Finding Your Spark",
-    description: "Before we build anything, let's talk about WHY. Click here to see why creating smart machines is like having a superpower!",
+    title: "Why Build Apps & AI? Finding Your Spark",
+    description: "Before we build anything, let's talk about WHY. Click here to see why creating smart apps is like having a superpower!",
     expandedContent: (
       <>
         <p>
-          <strong className="text-ink">1. Bring Ideas to Life:</strong> With hardware and AI, you can build robots that move, think, and solve puzzles. It's like building your own friendly sidekick!
+          <strong className="text-ink">1. Bring Ideas to Life:</strong> With software and AI, you can build apps that think, talk, and solve puzzles. It's like building your own smart assistant!
         </p>
         <p>
-          <strong className="text-ink">2. Help the World:</strong> Smart machines can explore space, help doctors heal people, or clean up the oceans. The robots you build could change the world.
+          <strong className="text-ink">2. Help the World:</strong> Smart apps can help doctors heal people, teach us new things, or protect the planet. The software you build could change the world.
         </p>
         <p>
           <strong className="text-ink">3. Never Give Up:</strong> Wires will cross and code might break on the first try. That's totally okay! It's just like a fun puzzle. Keep trying, ask for help, and have fun figuring it out.
@@ -29,23 +29,23 @@ const MODULES = [
   },
   {
     id: "03",
-    title: "Brains & Wires (Hardware 101)",
-    description: "Discover microchips, sensors, and motors. Learn how to connect parts to make things move and light up.",
+    title: "Code & Logic (Software 101)",
+    description: "Discover variables, loops, and functions. Learn how to write code to make your apps come to life.",
   },
   {
     id: "04",
-    title: "Building Your First Smart Bot",
-    description: "Combine your hardware and a little bit of code to build a simple robot that can sense its surroundings.",
+    title: "Building Your First Smart App",
+    description: "Combine your coding skills and a little bit of AI to build a simple app that can understand what you type.",
   },
   {
     id: "05",
     title: "Teaching Computers to See",
-    description: "Give your robot 'eyes'! Learn how AI helps machines recognize faces, colors, and objects.",
+    description: "Give your app 'eyes'! Learn how AI helps machines recognize faces, colors, and objects.",
   },
   {
     id: "06",
     title: "Your Grand Invention",
-    description: "Pick your favorite AI tool and hardware parts to invent something totally new. What will you build?",
+    description: "Pick your favorite AI tool and coding skills to invent something totally new. What will you build?",
   }
 ]
 
@@ -55,10 +55,10 @@ export function ModulesGrid() {
       <div className="max-w-6xl mx-auto">
         <div className="mb-16">
           <h2 className="text-4xl md:text-5xl font-heading text-ink mb-4">
-            AI & Hardware Adventure
+            AI & Software Adventure
           </h2>
           <p className="text-on-surface-variant font-body max-w-2xl text-lg">
-            Start your journey into the future! These fun, simple steps will teach you how to build smart robots and awesome AI inventions.
+            Start your journey into the future! These fun, simple steps will teach you how to build smart apps and awesome AI inventions.
           </p>
         </div>
         
