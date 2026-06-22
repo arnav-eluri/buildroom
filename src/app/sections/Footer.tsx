@@ -54,6 +54,12 @@ export function Footer() {
                     <span className="text-sm opacity-50">↗</span>
                   </a>
                 </li>
+                <li>
+                  <a href="https://www.linkedin.com/in/ruhiisharma/" target="_blank" rel="noreferrer" className="font-body text-lg text-ink/70 hover:text-accent transition-colors duration-300 flex items-center gap-2">
+                    Ruhi Sharma
+                    <span className="text-sm opacity-50">↗</span>
+                  </a>
+                </li>
               </ul>
             </div>
           </div>

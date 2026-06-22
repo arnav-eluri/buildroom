@@ -213,6 +213,104 @@ export const MODULES: ModuleData[] = [
     id: "06",
     title: "Your Grand Invention",
     description: "Pick your favorite AI tool and coding skills to invent something totally new. What will you build?",
+  },
+  {
+    id: "07",
+    title: "Introduction to Cybersecurity",
+    description: "Learn how to protect systems, networks, and data from digital attacks and unauthorized access.",
+    expandedContent: (
+      <div className="space-y-4 text-on-surface-variant font-body">
+        <p>
+          <strong className="text-ink">Cybersecurity</strong> is the practice of protecting computers, networks, devices, applications, and data from unauthorized access, attacks, theft, or damage. As our lives become increasingly dependent on technology and the internet, cybersecurity plays a vital role in safeguarding personal information, business operations, and online services.
+        </p>
+
+        <div className="pt-4">
+          <h4 className="text-ink font-heading text-2xl mb-4">The CIA Triad</h4>
+          <p className="mb-4">The foundation of cybersecurity is based on three key principles known as the CIA Triad:</p>
+          
+          <div className="space-y-3">
+            <div className="bg-surface p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Confidentiality</strong> ensures that information is accessible only to authorized individuals.</p>
+              <p className="mt-1 text-sm text-ink/70">Example: Passwords protect your email account from unauthorized access.</p>
+            </div>
+            
+            <div className="bg-surface p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Integrity</strong> ensures that data remains accurate and unaltered.</p>
+              <p className="mt-1 text-sm text-ink/70">Example: Bank records should not be modified without proper authorization.</p>
+            </div>
+            
+            <div className="bg-surface p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Availability</strong> ensures that systems and data are accessible whenever users need them.</p>
+              <p className="mt-1 text-sm text-ink/70">Example: Online banking services should be accessible at any time.</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="pt-4">
+          <h4 className="text-ink font-heading text-2xl mb-4">Basic Security Concepts</h4>
+          
+          <div className="grid sm:grid-cols-2 gap-4">
+            <div className="bg-surface p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Asset:</strong> Anything valuable that needs protection, such as computers, servers, databases, or sensitive information.</p>
+            </div>
+            
+            <div className="bg-surface p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Threat:</strong> Anything capable of causing harm to an asset, including hackers, malware, or natural disasters.</p>
+            </div>
+            
+            <div className="bg-surface p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Vulnerability:</strong> A weakness that attackers can exploit, such as weak passwords or outdated software.</p>
+            </div>
+            
+            <div className="bg-surface p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Risk:</strong> The possibility that a threat may exploit a vulnerability and cause damage.</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="pt-4">
+          <h4 className="text-ink font-heading text-2xl mb-4">Common Cyber Attacks</h4>
+          
+          <div className="space-y-3">
+            <div className="bg-surface/40 p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Social Engineering:</strong> Attackers manipulate people into revealing sensitive information.</p>
+            </div>
+            
+            <div className="bg-surface/40 p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Phishing:</strong> Uses fake emails, messages, or websites to steal passwords and personal information.</p>
+            </div>
+            
+            <div className="bg-surface/40 p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Malware:</strong> Malicious software designed to damage systems or gain unauthorized access. Types include viruses, worms, trojans, spyware, and ransomware.</p>
+            </div>
+            
+            <div className="bg-surface/40 p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Ransomware:</strong> Encrypts a victim's files and demands payment to restore access.</p>
+            </div>
+            
+            <div className="bg-surface/40 p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Password Cracking & Credential Theft:</strong> Methods to gain unauthorized access to accounts.</p>
+            </div>
+            
+            <div className="bg-surface/40 p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Zero-Day Attack:</strong> Exploits a software vulnerability before developers have released a fix.</p>
+            </div>
+            
+            <div className="bg-surface/40 p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Supply Chain Attack:</strong> Targets trusted software providers or vendors to compromise their customers.</p>
+            </div>
+            
+            <div className="bg-surface/40 p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">AI-Powered Attacks:</strong> Attackers use Artificial Intelligence to create convincing phishing campaigns, automate attacks, and evade security systems.</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="pt-4 p-4 bg-accent/10 text-ink font-medium border border-accent/20 rounded-lg">
+          Understanding these concepts is the first step toward building secure systems and protecting yourself and others in the digital world.
+        </div>
+      </div>
+    )
   }
 ]
 
