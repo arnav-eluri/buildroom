@@ -1,5 +1,6 @@
 import img1 from "../assets/img-1.png"
 import img2 from "../assets/img-2.png"
+import img3 from "../assets/img-3.png"
 import React from "react"
 
 export type GameData = 
@@ -229,42 +230,6 @@ export const MODULES: ModuleData[] = [
     }
   },
   {
-    id: "04",
-    title: "Building Your First Smart App",
-    description: "Combine your coding skills and a little bit of AI to build a simple app that can understand what you type.",
-    game: {
-      type: 'quiz',
-      question: 'When you build an app that understands what you type, what are you mainly combining?',
-      options: ['Just a keyboard and screen', 'Coding skills and a little bit of AI', 'Magic and luck', 'Paint and canvas'],
-      correctAnswerIndex: 1
-    }
-  },
-  {
-    id: "05",
-    title: "Teaching Computers to See",
-    description: "Give your app 'eyes'! Learn how AI helps machines recognize faces, colors, and objects.",
-    game: {
-      type: 'wordle',
-      levels: [
-        { word: 'FACES', hint: 'AI helps machines recognize these on people' },
-        { word: 'COLOR', hint: 'AI helps machines recognize faces, ____s, and objects' },
-        { word: 'SIGHT', hint: 'Giving your app "eyes" gives it this sense' },
-        { word: 'LEARN', hint: 'What we want the AI to do with images' }
-      ]
-    }
-  },
-  {
-    id: "06",
-    title: "Your Grand Invention",
-    description: "Pick your favorite AI tool and coding skills to invent something totally new. What will you build?",
-    game: {
-      type: 'quiz',
-      question: 'According to the module, what do you need to pick to invent something totally new?',
-      options: ['Just a very fast computer', 'Your favorite AI tool and coding skills', 'A lot of money', 'Every single programming language'],
-      correctAnswerIndex: 1
-    }
-  },
-  {
     id: "07",
     title: "Introduction to Cybersecurity",
     description: "Learn how to protect systems, networks, and data from digital attacks and unauthorized access.",
@@ -369,6 +334,103 @@ export const MODULES: ModuleData[] = [
         { word: 'ASSET', hint: 'Anything valuable that needs protection' },
         { word: 'RISKS', hint: 'The possibility that a threat may exploit a vulnerability' }
       ]
+    }
+  },
+  {
+    id: "08",
+    title: "Building a College FAQ Chatbot using Gemini API",
+    description: "Build a simple AI chatbot that answers college-related questions using Gemini API.",
+    expandedContent: (
+      <div className="space-y-6 text-on-surface-variant font-body">
+        <div>
+          <h4 className="text-ink font-heading text-2xl mb-4">How the Chatbot Works</h4>
+          <div className="space-y-3">
+            <div className="bg-surface p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">User Input:</strong> Student asks a question (e.g., “What is the attendance requirement?”).</p>
+            </div>
+            <div className="bg-surface p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Context:</strong> The chatbot is given college information such as attendance rules, library timings, and placement details.</p>
+            </div>
+            <div className="bg-surface p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Response Generation:</strong> Gemini reads the question + context and generates a human-like answer.</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h4 className="text-ink font-heading text-2xl mb-4">Steps to Build</h4>
+          <ol className="list-decimal pl-5 space-y-2">
+            <li>Create a <strong className="text-ink">Google AI Studio</strong> account.</li>
+            <li>Generate a Gemini API Key.</li>
+            <li>Install Python and the Gemini SDK.</li>
+            <li>Store your college FAQs in a text file or dictionary.</li>
+            <li>Send the student’s question along with the FAQ data to Gemini.</li>
+            <li>Display the AI-generated answer.</li>
+          </ol>
+        </div>
+
+        <div>
+          <h4 className="text-ink font-heading text-2xl mb-4">Example Workflow</h4>
+          <div className="flex flex-col gap-2 p-6 bg-surface/40 rounded-xl border border-outline/10">
+            <div className="w-full relative transition-transform duration-500 hover:scale-[1.02]" style={{ borderRadius: '12px' }}>
+              <img src={img3} alt="College Chatbot Workflow" className="w-full h-auto object-cover relative z-10 shadow-lg shadow-black/20" style={{ borderRadius: '12px' }} />
+            </div>
+          </div>
+        </div>
+
+        <div className="pt-4 p-4 bg-accent/10 text-ink font-medium border border-accent/20 rounded-lg">
+          <strong className="text-accent">Outcome:</strong> By completing this module, students learn AI fundamentals, prompt engineering, API integration, and chatbot development while building a practical College FAQ Assistant.
+        </div>
+
+        <div className="pt-2">
+          <a href="https://github.com/arnav-eluri/buildroomprojects/tree/main/smartchatbot" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 bg-surface border border-outline/20 rounded-lg text-ink hover:bg-surface/80 transition-colors">
+            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" className="text-on-surface-variant"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            <span className="font-semibold">View Source Code on GitHub</span>
+          </a>
+        </div>
+      </div>
+    ),
+    game: {
+      type: 'quiz',
+      question: 'In the chatbot workflow, what information does Gemini need to read to generate a proper human-like answer?',
+      options: ['Only the student\'s question', 'The student\'s question + context (FAQ Data)', 'The college website URL', 'A dictionary of all English words'],
+      correctAnswerIndex: 1
+    }
+  },
+  {
+    id: "04",
+    title: "Building Your First Smart App",
+    description: "Combine your coding skills and a little bit of AI to build a simple app that can understand what you type.",
+    game: {
+      type: 'quiz',
+      question: 'When you build an app that understands what you type, what are you mainly combining?',
+      options: ['Just a keyboard and screen', 'Coding skills and a little bit of AI', 'Magic and luck', 'Paint and canvas'],
+      correctAnswerIndex: 1
+    }
+  },
+  {
+    id: "05",
+    title: "Teaching Computers to See",
+    description: "Give your app 'eyes'! Learn how AI helps machines recognize faces, colors, and objects.",
+    game: {
+      type: 'wordle',
+      levels: [
+        { word: 'FACES', hint: 'AI helps machines recognize these on people' },
+        { word: 'COLOR', hint: 'AI helps machines recognize faces, ____s, and objects' },
+        { word: 'SIGHT', hint: 'Giving your app "eyes" gives it this sense' },
+        { word: 'LEARN', hint: 'What we want the AI to do with images' }
+      ]
+    }
+  },
+  {
+    id: "06",
+    title: "Your Grand Invention",
+    description: "Pick your favorite AI tool and coding skills to invent something totally new. What will you build?",
+    game: {
+      type: 'quiz',
+      question: 'According to the module, what do you need to pick to invent something totally new?',
+      options: ['Just a very fast computer', 'Your favorite AI tool and coding skills', 'A lot of money', 'Every single programming language'],
+      correctAnswerIndex: 1
     }
   }
 ]
