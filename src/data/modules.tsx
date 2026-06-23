@@ -2,11 +2,16 @@ import img1 from "../assets/img-1.png"
 import img2 from "../assets/img-2.png"
 import React from "react"
 
+export type GameData = 
+  | { type: 'wordle'; levels: { word: string; hint?: string }[] }
+  | { type: 'quiz'; question: string; options: string[]; correctAnswerIndex: number };
+
 export interface ModuleData {
   id: string
   title: string
   description: string
   expandedContent?: React.ReactNode
+  game?: GameData
 }
 
 export const MODULES: ModuleData[] = [
@@ -29,7 +34,13 @@ export const MODULES: ModuleData[] = [
           Every expert inventor was once a beginner. You can do this!
         </p>
       </>
-    )
+    ),
+    game: {
+      type: 'quiz',
+      question: 'What makes building software and AI like having a "superpower"?',
+      options: ['It makes you invisible', 'You can bring ideas to life and help the world', 'It lets you fly', 'You never make mistakes'],
+      correctAnswerIndex: 1
+    }
   },
   {
     id: "02",
@@ -93,7 +104,16 @@ export const MODULES: ModuleData[] = [
           </p>
         </div>
       </div>
-    )
+    ),
+    game: {
+      type: 'wordle',
+      levels: [
+        { word: 'MODEL', hint: 'This stores the knowledge learned during training' },
+        { word: 'TRAIN', hint: 'The process of giving data to AI so it can learn' },
+        { word: 'LEARN', hint: 'What AI does to recognize patterns in data' },
+        { word: 'BRAIN', hint: 'Deep learning simulates how the human _____ is built' }
+      ]
+    }
   },
   {
     id: "03",
@@ -197,22 +217,52 @@ export const MODULES: ModuleData[] = [
           </div>
         </div>
       </div>
-    )
+    ),
+    game: {
+      type: 'wordle',
+      levels: [
+        { word: 'DEBUG', hint: 'Fixing errors in your code' },
+        { word: 'ARRAY', hint: 'A list of items stored in code' },
+        { word: 'LOOPS', hint: 'Doing the same thing over and over' },
+        { word: 'STATE', hint: 'Memory of an app at a given moment' }
+      ]
+    }
   },
   {
     id: "04",
     title: "Building Your First Smart App",
     description: "Combine your coding skills and a little bit of AI to build a simple app that can understand what you type.",
+    game: {
+      type: 'quiz',
+      question: 'When you build an app that understands what you type, what are you mainly combining?',
+      options: ['Just a keyboard and screen', 'Coding skills and a little bit of AI', 'Magic and luck', 'Paint and canvas'],
+      correctAnswerIndex: 1
+    }
   },
   {
     id: "05",
     title: "Teaching Computers to See",
     description: "Give your app 'eyes'! Learn how AI helps machines recognize faces, colors, and objects.",
+    game: {
+      type: 'wordle',
+      levels: [
+        { word: 'FACES', hint: 'AI helps machines recognize these on people' },
+        { word: 'COLOR', hint: 'AI helps machines recognize faces, ____s, and objects' },
+        { word: 'SIGHT', hint: 'Giving your app "eyes" gives it this sense' },
+        { word: 'LEARN', hint: 'What we want the AI to do with images' }
+      ]
+    }
   },
   {
     id: "06",
     title: "Your Grand Invention",
     description: "Pick your favorite AI tool and coding skills to invent something totally new. What will you build?",
+    game: {
+      type: 'quiz',
+      question: 'According to the module, what do you need to pick to invent something totally new?',
+      options: ['Just a very fast computer', 'Your favorite AI tool and coding skills', 'A lot of money', 'Every single programming language'],
+      correctAnswerIndex: 1
+    }
   },
   {
     id: "07",
@@ -310,7 +360,16 @@ export const MODULES: ModuleData[] = [
           Understanding these concepts is the first step toward building secure systems and protecting yourself and others in the digital world.
         </div>
       </div>
-    )
+    ),
+    game: {
+      type: 'wordle',
+      levels: [
+        { word: 'VIRUS', hint: 'A type of malware mentioned in the module' },
+        { word: 'PHISH', hint: 'Short for the attack that uses fake emails or websites' },
+        { word: 'ASSET', hint: 'Anything valuable that needs protection' },
+        { word: 'RISKS', hint: 'The possibility that a threat may exploit a vulnerability' }
+      ]
+    }
   }
 ]
 

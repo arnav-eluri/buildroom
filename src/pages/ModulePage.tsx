@@ -1,6 +1,8 @@
 import { useParams, Link } from "react-router-dom"
 import { getModuleById } from "@/data/modules"
 import { ArrowLeft } from "lucide-react"
+import { TechWordle } from "@/components/games/TechWordle"
+import { QuizGame } from "@/components/games/QuizGame"
 
 export function ModulePage() {
   const { id } = useParams()
@@ -42,6 +44,29 @@ export function ModulePage() {
               <p className="italic opacity-70">Detailed content coming soon.</p>
             )}
           </div>
+
+          {module.game && (
+            <div className="mt-16 pt-12 border-t border-outline/30">
+              <div className="text-center mb-10">
+                <h2 className="text-3xl font-heading text-ink inline-block relative">
+                  Test Your Skills
+                  <div className="absolute -bottom-2 left-0 right-0 h-1 bg-accent/20 rounded-full" />
+                </h2>
+                <p className="text-on-surface-variant mt-3">Apply what you've learned to solve this challenge.</p>
+              </div>
+
+              {module.game.type === 'wordle' && (
+                <TechWordle levels={module.game.levels} />
+              )}
+              {module.game.type === 'quiz' && (
+                <QuizGame 
+                  question={module.game.question} 
+                  options={module.game.options} 
+                  correctAnswerIndex={module.game.correctAnswerIndex} 
+                />
+              )}
+            </div>
+          )}
         </div>
       </div>
     </div>
