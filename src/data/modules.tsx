@@ -5,7 +5,7 @@ import React from "react"
 
 export type GameData = 
   | { type: 'wordle'; levels: { word: string; hint?: string }[] }
-  | { type: 'quiz'; question: string; options: string[]; correctAnswerIndex: number };
+  | { type: 'quiz'; question: string; options: string[]; correctAnswerIndex: number; explanation?: string };
 
 export interface ModuleData {
   id: string
@@ -490,32 +490,17 @@ export const MODULES: ModuleData[] = [
           </div>
         </div>
 
-        <div className="pt-6">
-          <div className="bg-accent/10 p-6 rounded-lg border-2 border-accent/30">
-            <h4 className="text-ink font-heading text-xl mb-3 flex items-center gap-2">
-              <span>🧠</span> Brain Teaser
-            </h4>
-            <p className="text-on-surface-variant font-body mb-4">
-              You receive an email from what appears to be your bank, asking you to urgently click a link and verify your account details due to "suspicious activity." The email looks legitimate, uses the bank's logo, and creates a sense of panic.
-            </p>
-            <div className="space-y-2">
-              <p className="font-semibold text-ink">What type of attack is this, and what should you do?</p>
-              <p className="text-sm text-ink/70">Think about: The CIA Triad, social engineering techniques, and Zero Trust principles.</p>
-            </div>
-          </div>
-        </div>
-
         <div className="pt-4 p-4 bg-accent/10 text-ink font-medium border border-accent/20 rounded-lg">
           <strong>Conclusion:</strong> Cybersecurity is not just about technology—it is also about people, processes, and continuous learning. Since attackers constantly develop new techniques, organizations must remain vigilant and adaptable. Understanding what needs protection, following the principle of "Never Trust, Always Verify," and implementing multiple layers of defense are essential for maintaining strong security. Cybersecurity is an ongoing journey, and staying curious and informed is one of the best defenses against evolving threats.
         </div>
       </div>
     ),
     game: {
-      type: 'brainTeaser',
-      question: 'You receive an email from what appears to be your bank, asking you to urgently click a link and verify your account details due to "suspicious activity." The email looks legitimate, uses the bank\'s logo, and creates a sense of panic.',
-      hint: 'Think about: The CIA Triad, social engineering techniques, and Zero Trust principles.',
-      answer: 'Phishing attack - Do not click the link. Instead, contact your bank directly through official channels.',
-      explanation: 'This is a classic phishing attack. The attacker is trying to compromise confidentiality (steal your credentials) through social engineering. Under Zero Trust, you should never trust unsolicited requests and always verify through official channels.'
+      type: 'quiz',
+      question: 'You notice your company\'s website is receiving thousands of requests per second from devices around the world, making it completely unresponsive to legitimate users. What type of attack is this?',
+      options: ['Phishing attack', 'DDoS attack', 'MITM attack', 'SQL injection'],
+      correctAnswerIndex: 1,
+      explanation: 'This is a Distributed Denial of Service (DDoS) attack. It targets the Availability pillar of the CIA Triad by overwhelming systems with traffic. Defense in Depth strategies help mitigate this through firewalls, rate limiting, and traffic analysis.'
     }
   },
   {
@@ -577,6 +562,198 @@ export const MODULES: ModuleData[] = [
       question: 'In the chatbot workflow, what information does Gemini need to read to generate a proper human-like answer?',
       options: ['Only the student\'s question', 'The student\'s question + context (FAQ Data)', 'The college website URL', 'A dictionary of all English words'],
       correctAnswerIndex: 1
+    }
+  },
+  {
+    id: "09",
+    title: "Cybersecurity Threats & Defense",
+    description: "Explore network attacks, security frameworks, and defense strategies to protect systems.",
+    expandedContent: (
+      <div className="space-y-4 text-on-surface-variant font-body">
+        <p>
+          <strong className="text-ink">Cybersecurity</strong> is the practice of protecting computers, networks, devices, applications, and data from unauthorized access, attacks, theft, or damage. As our lives become increasingly dependent on technology and the internet, cybersecurity plays a vital role in safeguarding personal information, business operations, and online services.
+        </p>
+
+        <div className="pt-4">
+          <h4 className="text-ink font-heading text-2xl mb-4">Network-Based Attacks</h4>
+          
+          <div className="space-y-3">
+            <div className="bg-surface p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Denial of Service (DoS):</strong> Floods a system with traffic, making it unavailable to legitimate users.</p>
+            </div>
+            
+            <div className="bg-surface p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Distributed Denial of Service (DDoS):</strong> Works like a DoS attack but uses multiple compromised devices simultaneously.</p>
+            </div>
+            
+            <div className="bg-surface p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Man-in-the-Middle (MITM):</strong> Occurs when an attacker secretly intercepts communication between two parties.</p>
+            </div>
+            
+            <div className="bg-surface p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Packet Sniffing:</strong> Captures network traffic to obtain sensitive information.</p>
+            </div>
+            
+            <div className="bg-surface p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Spoofing:</strong> Pretending to be a trusted user, device, or website to gain access or information.</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="pt-4">
+          <h4 className="text-ink font-heading text-2xl mb-4">Cloud Security Risks</h4>
+          <p className="mb-4">
+            Cloud computing provides flexibility and convenience but also introduces risks such as data breaches, weak access controls, misconfigured settings, and attacks on SaaS applications.
+          </p>
+          <div className="bg-surface/40 p-4 rounded-lg border border-outline/10">
+            <p><strong className="text-ink">Software as a Service (SaaS):</strong> Applications delivered over the internet, such as cloud storage platforms and online email services.</p>
+          </div>
+        </div>
+
+        <div className="pt-4">
+          <h4 className="text-ink font-heading text-2xl mb-4">Insider Threats and API Risks</h4>
+          
+          <div className="space-y-3">
+            <div className="bg-surface/40 p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Insider Threats:</strong> Not all threats come from outside an organization. These originate from employees, contractors, or other individuals who have legitimate access to systems.</p>
+            </div>
+            
+            <div className="bg-surface/40 p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">API Risks:</strong> Organizations face risks through APIs and third-party integrations, which can expose data if poorly secured or vulnerable to attacks.</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="pt-4">
+          <h4 className="text-ink font-heading text-2xl mb-4">Cybersecurity Actors and Attack Lifecycle</h4>
+          
+          <div className="space-y-3">
+            <p><strong className="text-ink">Threat Actors:</strong> The individuals or groups responsible for cyber attacks, including cybercriminals, hacktivists, nation-state attackers, and malicious insiders.</p>
+            
+            <div className="bg-surface p-4 rounded-lg border border-outline/10">
+              <p className="font-semibold text-ink mb-2">A typical cyber attack follows several stages:</p>
+              <ol className="list-decimal pl-5 space-y-1">
+                <li>Reconnaissance</li>
+                <li>Initial Access</li>
+                <li>Exploitation</li>
+                <li>Privilege Escalation</li>
+                <li>Lateral Movement</li>
+                <li>Data Theft or Damage</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <div className="pt-4">
+          <h4 className="text-ink font-heading text-2xl mb-4">MITRE ATT&CK Framework</h4>
+          <p>
+            The <strong className="text-ink">MITRE ATT&CK Framework</strong> is a globally recognized knowledge base that documents how attackers operate. It helps organizations understand attacker tactics, techniques, and procedures (TTPs) so they can better detect and defend against threats.
+          </p>
+        </div>
+
+        <div className="pt-4">
+          <h4 className="text-ink font-heading text-2xl mb-4">Security Frameworks and Standards</h4>
+          
+          <div className="grid sm:grid-cols-2 gap-4">
+            <div className="bg-surface p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">NIST CSF:</strong> Provides cybersecurity best practices and risk management guidelines.</p>
+            </div>
+            
+            <div className="bg-surface p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">ISO 27001:</strong> International standard for information security management.</p>
+            </div>
+            
+            <div className="bg-surface p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">GDPR:</strong> Protects personal data and privacy within the European Union.</p>
+            </div>
+            
+            <div className="bg-surface p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">HIPAA:</strong> Safeguards healthcare information.</p>
+            </div>
+            
+            <div className="bg-surface p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">PCI DSS:</strong> Protects payment card information.</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="pt-4">
+          <h4 className="text-ink font-heading text-2xl mb-4">Zero Trust Security</h4>
+          
+          <div className="bg-accent/10 p-4 rounded-lg border border-accent/20">
+            <p className="font-semibold text-ink mb-2">"Never Trust, Always Verify"</p>
+            <p>
+              Modern cybersecurity follows the principle of <strong className="text-ink">Zero Trust</strong>, which requires every user, device, and application to continuously verify their identity before gaining access to resources.
+            </p>
+            <p className="mt-2">
+              The concept of <strong className="text-ink">Least Privilege</strong> supports this model by granting users only the minimum level of access required to perform their tasks.
+            </p>
+          </div>
+        </div>
+
+        <div className="pt-4">
+          <h4 className="text-ink font-heading text-2xl mb-4">Artificial Intelligence in Cybersecurity</h4>
+          
+          <div className="space-y-3">
+            <div className="bg-surface/40 p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Defensive AI:</strong> AI and Machine Learning are widely used for threat detection, malware analysis, fraud detection, and automated incident response.</p>
+            </div>
+            
+            <div className="bg-surface/40 p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Offensive AI:</strong> Attackers also use AI to enhance phishing attacks, automate password guessing, create sophisticated malware, and improve social engineering techniques.</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="pt-4">
+          <h4 className="text-ink font-heading text-2xl mb-4">SOAR</h4>
+          <p>
+            <strong className="text-ink">Security Orchestration, Automation, and Response (SOAR)</strong> helps organizations automate repetitive security tasks, improve incident response times, and reduce manual effort.
+          </p>
+        </div>
+
+        <div className="pt-4">
+          <h4 className="text-ink font-heading text-2xl mb-4">Defense in Depth</h4>
+          <p className="mb-4">
+            No single security measure can completely protect an organization. Therefore, cybersecurity relies on a strategy called <strong className="text-ink">Defense in Depth</strong>, which uses multiple layers of security controls.
+          </p>
+          
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            <div className="bg-surface p-3 rounded-lg border border-outline/10">
+              <p>Strong passwords</p>
+            </div>
+            <div className="bg-surface p-3 rounded-lg border border-outline/10">
+              <p>Multi-Factor Authentication (MFA)</p>
+            </div>
+            <div className="bg-surface p-3 rounded-lg border border-outline/10">
+              <p>Firewalls</p>
+            </div>
+            <div className="bg-surface p-3 rounded-lg border border-outline/10">
+              <p>Antivirus software</p>
+            </div>
+            <div className="bg-surface p-3 rounded-lg border border-outline/10">
+              <p>Encryption</p>
+            </div>
+            <div className="bg-surface p-3 rounded-lg border border-outline/10">
+              <p>Monitoring and logging</p>
+            </div>
+            <div className="bg-surface p-3 rounded-lg border border-outline/10">
+              <p>Employee security awareness training</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="pt-4 p-4 bg-accent/10 text-ink font-medium border border-accent/20 rounded-lg">
+          <strong>Conclusion:</strong> Cybersecurity is not just about technology—it is also about people, processes, and continuous learning. Since attackers constantly develop new techniques, organizations must remain vigilant and adaptable. Understanding what needs protection, following the principle of "Never Trust, Always Verify," and implementing multiple layers of defense are essential for maintaining strong security. Cybersecurity is an ongoing journey, and staying curious and informed is one of the best defenses against evolving threats.
+        </div>
+      </div>
+    ),
+    game: {
+      type: 'quiz',
+      question: 'Your company\'s website is receiving thousands of requests per second from devices around the world, making it completely unresponsive to legitimate users. What type of attack is this?',
+      options: ['Phishing attack', 'DDoS attack', 'MITM attack', 'SQL injection'],
+      correctAnswerIndex: 1,
+      explanation: 'This is a Distributed Denial of Service (DDoS) attack. It targets the Availability pillar of the CIA Triad by overwhelming systems with traffic. Defense in Depth strategies help mitigate this through firewalls, rate limiting, and traffic analysis.'
     }
   },
   {
