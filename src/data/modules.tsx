@@ -1,6 +1,8 @@
 import img1 from "../assets/img-1.png"
 import img2 from "../assets/img-2.png"
 import img3 from "../assets/img-3.png"
+import chefImg from "../assets/confused_chef.png"
+import bakerImg from "../assets/baker_cookies.png"
 import React from "react"
 
 export type GameData = 
@@ -790,6 +792,74 @@ export const MODULES: ModuleData[] = [
       question: 'According to the module, what do you need to pick to invent something totally new?',
       options: ['Just a very fast computer', 'Your favorite AI tool and coding skills', 'A lot of money', 'Every single programming language'],
       correctAnswerIndex: 1
+    }
+  },
+  {
+    id: "10",
+    title: "The Art of Context & Constraints",
+    description: "Learn how to control AI outputs using well-structured prompts and improve response quality from LLMs through practical interaction.",
+    expandedContent: (
+      <div className="space-y-4 text-on-surface-variant font-body">
+        <p>
+          Imagine you walk into a bustling restaurant, sit down, and simply tell the chef, "Make me something good." The chef gets to work and brings out a beautifully plated, extra-spicy seafood curry. The only problem? You are severely allergic to seafood and can't handle spicy food! The chef isn't a bad cook; they just didn't have the context they needed to serve you properly.
+        </p>
+        <p>
+          Working with an AI is exactly like talking to that chef. When you give a simple command without any background information, the AI has to guess what you want. Sometimes it guesses right, but often, it serves you a "spicy seafood curry" when you really wanted a simple grilled cheese sandwich. Adding context—the <strong className="text-ink">who</strong>, <strong className="text-ink">what</strong>, <strong className="text-ink">why</strong>, and <strong className="text-ink">where</strong>—transforms a guessing game into a precise, tailored response.
+        </p>
+
+        <div className="w-full relative transition-transform duration-500 hover:scale-[1.02] my-4" style={{ borderRadius: '12px' }}>
+          <img src={chefImg} alt="Confused chef with spicy curry" className="w-full max-w-md mx-auto h-auto object-cover relative z-10 shadow-lg shadow-black/20" style={{ borderRadius: '12px' }} />
+        </div>
+
+        <div className="bg-surface p-4 rounded-lg border border-outline/10 mt-6">
+          <h4 className="text-ink font-heading text-xl mb-2">Brain Teaser 1</h4>
+          <p className="mb-2">
+            You are a baker trying to come up with a new cookie recipe to sell at a school bake sale. You ask the AI: <span className="italic">"Give me a cookie recipe."</span>
+          </p>
+          <p className="mb-4">
+            The AI gives you a complicated French macaron recipe that takes 6 hours and uses expensive almond flour. <strong>How would you rewrite your request to get a recipe that actually works for a school bake sale?</strong>
+          </p>
+          <p className="text-sm italic text-ink/70 mb-4">(Take a second to think before reading on...)</p>
+          <p>
+            If you thought about adding details like "easy," "cheap," and "nut-free," you are on the exact right track! A much better prompt would be: <strong className="text-ink">"I am baking for a school bake sale. Give me a simple, cheap, and nut-free cookie recipe that can be made in large batches."</strong> By setting the scene, the AI knows exactly what constraints it needs to work within.
+          </p>
+          
+          <div className="w-full relative transition-transform duration-500 hover:scale-[1.02] mt-4" style={{ borderRadius: '12px' }}>
+            <img src={bakerImg} alt="Baker with simple plain cookies" className="w-full max-w-md mx-auto h-auto object-cover relative z-10 shadow-lg shadow-black/20" style={{ borderRadius: '12px' }} />
+          </div>
+        </div>
+
+        <p className="pt-4">
+          This brings us to the second half of the secret recipe: <strong className="text-ink">Constraints</strong>. Constraints are the boundaries you set for the AI. They are the "do nots" and the specific rules it must follow. If context is giving the chef your flavor preferences, constraints are telling the chef about your allergies.
+        </p>
+        <p>
+          When you leave out constraints, the AI might give you an answer that is too long, too complex, or uses words you don't understand. You have the power to put a leash on the AI's creativity. You can tell it to use only words a 5th grader would understand, limit the response to three sentences, or forbid it from using the letter 'e' (though that last one is just for fun!).
+        </p>
+
+        <div className="bg-surface p-4 rounded-lg border border-outline/10 mt-6">
+          <h4 className="text-ink font-heading text-xl mb-2">Brain Teaser 2</h4>
+          <p className="mb-2">
+            You are writing an email to your very strict, no-nonsense boss asking for a deadline extension. You ask the AI to draft the email, and it starts with: <span className="italic">"Hey there! I'm super swamped and need a solid solid, can we push the deadline back?"</span>
+          </p>
+          <p className="mb-4">
+            <strong>Oh no! What constraint did you forget to give the AI?</strong>
+          </p>
+          <p className="text-sm italic text-ink/70 mb-4">(Think about the boundaries...)</p>
+          <p>
+            You forgot to set the tone and length constraints! To fix this, you would add constraints like: <strong className="text-ink">"Do not use slang. Keep it strictly professional, under 50 words, and do not make excuses. Simply ask for the extension politely."</strong>
+          </p>
+        </div>
+
+        <div className="pt-4 p-4 bg-accent/10 text-ink font-medium border border-accent/20 rounded-lg mt-6">
+          As you venture further into prompt engineering, remember that you are the director of a play, and the AI is your lead actor. The actor has all the talent in the world, but without your stage directions (context) and script boundaries (constraints), they might just start improvising a comedy during your serious drama. The next time you sit down to prompt, ask yourself: <strong>Have I told the AI the whole story?</strong>
+        </div>
+      </div>
+    ),
+    game: {
+      type: 'quiz',
+      question: 'Which of the following is an example of a constraint in a prompt?',
+      options: ['I am a student learning to code.', 'Explain this to me.', 'Do not use any technical jargon.', 'I want to build a website.'],
+      correctAnswerIndex: 2
     }
   }
 ]

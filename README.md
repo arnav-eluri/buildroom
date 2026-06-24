@@ -29,5 +29,3 @@ Simply visit the website and start your tech adventure immediately from your bro
 
 - **Arnav Eluri** - [LinkedIn](https://www.linkedin.com/in/arnav-eluri)
 - **Ruhi Sharma** - [LinkedIn](https://www.linkedin.com/in/ruhiisharma/)
-- **Aryan Keshri** - [LinkedIn](https://www.linkedin.com/in/aryan-keshri-/)
-- **Devanshi Awasthi** - [LinkedIn](https://www.linkedin.com/in/devanshi-awasthi-1975a2296/)
