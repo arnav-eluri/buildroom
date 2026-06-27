@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import { Link } from "react-router-dom"
 
 export function Navbar() {
   return (
@@ -9,7 +10,9 @@ export function Navbar() {
           animate={{ opacity: 1, x: 0 }}
           className="flex items-center"
         >
-          <img src="/logo.png" alt="BuildRoom Logo" className="h-24 w-auto" />
+          <Link to="/">
+            <img src="/logo.png" alt="BuildRoom Logo" className="h-24 w-auto hover:opacity-80 transition-opacity" />
+          </Link>
         </motion.div>
         
         <motion.div
