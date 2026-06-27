@@ -13,9 +13,11 @@ We believe that learning to build apps and AI should feel like a superpower. Bui
 - **Finding Your Spark:** Why creating smart apps is like having a superpower.
 - **Intro to AI:** How computers "think" and learn from patterns.
 - **Software 101:** Code, logic, variables, and functions.
-- **Smart Apps:** Building your first app that can understand you.
-- **Computer Vision:** Teaching your app to see!
-- **Your Grand Invention:** Combining software and AI to solve real-world problems.
+- **Introduction to Cybersecurity:** Learn how to protect systems and data.
+- **Building a College FAQ Chatbot:** Build a simple AI chatbot using Gemini API.
+- **Cybersecurity Threats & Defense:** Explore network attacks and defense strategies.
+- **Context & Constraints:** Learn how to control AI outputs using well-structured prompts.
+- **Reading Between the Lines with OCR:** Learn how computers can read text from images.
 
 
 ## How It Works

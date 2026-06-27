@@ -15,7 +15,7 @@ export function ModulesGrid() {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {MODULES.map((mod, idx) => (
+          {MODULES.filter(mod => mod.expandedContent).map((mod, idx) => (
             <ModuleCard
               key={mod.id}
               index={idx}
