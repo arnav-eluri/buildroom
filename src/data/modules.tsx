@@ -861,6 +861,66 @@ export const MODULES: ModuleData[] = [
       options: ['I am a student learning to code.', 'Explain this to me.', 'Do not use any technical jargon.', 'I want to build a website.'],
       correctAnswerIndex: 2
     }
+  },
+  {
+    id: "11",
+    title: "Reading Between the Lines with OCR",
+    description: "Learn how computers can read text from images using Optical Character Recognition (OCR) and Tesseract.",
+    expandedContent: (
+      <div className="space-y-4 text-on-surface-variant font-body">
+        <div className="bg-surface/40 p-4 border border-outline/10" style={{ borderRadius: '16px' }}>
+          <p className="mb-3">
+            <strong className="text-ink">What is OCR?</strong><br />
+            <strong className="text-ink">Optical Character Recognition (OCR)</strong> is a technology that allows computers to "read" text inside images. To a computer, a photo of a book page is just a grid of colored pixels. OCR acts as the bridge that translates those pixels back into real, editable text (just like the text you type on a keyboard).
+          </p>
+          <p>
+            <strong className="text-ink">Why is it helpful for you?</strong><br />
+            As humans, we easily look at a sign and read the words, but we really dislike manually typing out a 50-page printed document. OCR saves us from tedious manual data entry. For beginners learning to build apps, OCR is an amazing first step into Artificial Intelligence. It is highly visual, easy to understand, and immediately useful. You can quickly build impressive projects—like apps that split the bill from a picture of a receipt, digitize old handwritten family recipes, or read license plates—without needing to be an expert!
+          </p>
+        </div>
+
+        <div className="pt-4">
+          <h4 className="text-ink font-heading text-2xl mb-4">Meet Tesseract</h4>
+          <p>
+            <strong className="text-ink">Tesseract</strong> is one of the most popular and powerful open-source OCR engines available. Originally developed by Hewlett-Packard and now maintained by Google, it can recognize over 100 languages out of the box.
+          </p>
+        </div>
+
+        <div className="bg-surface p-4 rounded-lg border border-outline/10 mt-6">
+          <h4 className="text-ink font-heading text-xl mb-4">Steps to Install Tesseract</h4>
+          <ol className="list-decimal pl-5 space-y-2">
+            <li><strong className="text-ink">Windows:</strong> Download the installer from the UB-Mannheim Tesseract GitHub page and run it. Don't forget to add the installation path to your system's Environment Variables!</li>
+            <li><strong className="text-ink">macOS:</strong> Open your terminal and run <code className="bg-background/50 px-1 py-0.5 rounded text-ink">brew install tesseract</code> using Homebrew.</li>
+            <li><strong className="text-ink">Linux:</strong> Run <code className="bg-background/50 px-1 py-0.5 rounded text-ink">sudo apt install tesseract-ocr</code> in your terminal.</li>
+            <li><strong className="text-ink">Python:</strong> To use it in your code, you usually install the wrapper by running <code className="bg-background/50 px-1 py-0.5 rounded text-ink">pip install pytesseract</code>.</li>
+          </ol>
+        </div>
+
+        <div className="bg-surface p-4 rounded-lg border border-outline/10 mt-6">
+          <h4 className="text-ink font-heading text-xl mb-2">Brain Teaser</h4>
+          <p className="mb-2">
+            You are building an app to read license plates for a parking garage. The OCR engine keeps misreading the letter <strong>'O'</strong> as the number <strong>'0'</strong>, and the letter <strong>'I'</strong> as the number <strong>'1'</strong>.
+          </p>
+          <p className="mb-4">
+            <strong>Without changing the OCR engine itself, how could you solve this problem using simple coding logic?</strong>
+          </p>
+          <p className="text-sm italic text-ink/70 mb-4">(Take a second to think before reading on...)</p>
+          <p>
+            If you thought about <strong className="text-ink">context and validation</strong>, you are correct! License plates often follow specific formats (like 3 letters followed by 4 numbers). You can write code that checks the position of the character. If the character is in a "letter" spot but is read as a '0', you programmatically change it to 'O'. You could also use a whitelist configuration in Tesseract to only allow certain characters in specific areas!
+          </p>
+        </div>
+
+        <div className="pt-4 p-4 bg-accent/10 text-ink font-medium border border-accent/20 rounded-lg mt-6">
+          With OCR, your apps can finally "read" the physical world. Just remember that image quality, lighting, and contrast play a huge role in how accurately Tesseract can extract the text!
+        </div>
+      </div>
+    ),
+    game: {
+      type: 'quiz',
+      question: 'Which of the following describes what Optical Character Recognition (OCR) does?',
+      options: ['Generates realistic images from text prompts.', 'Extracts and understands text from images or scanned documents.', 'Translates languages in real-time.', 'Optimizes code for faster performance.'],
+      correctAnswerIndex: 1
+    }
   }
 ]
 
