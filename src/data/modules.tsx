@@ -759,6 +759,137 @@ export const MODULES: ModuleData[] = [
     }
   },
   {
+    id: "10",
+    title: "The CIA Triad: Foundation of Cybersecurity",
+    description: "Learn about Confidentiality, Integrity, and Availability—the three pillars that support all cybersecurity.",
+    expandedContent: (
+      <div className="space-y-4 text-on-surface-variant font-body">
+        <p>
+          <strong className="text-ink">The CIA Triad</strong> is a simple framework that helps us understand what it means to keep information secure. Every security system, whether it protects a personal laptop, a bank's database, or a government network, is designed around these three principles.
+        </p>
+
+        <div className="grid sm:grid-cols-3 gap-4">
+          <div className="bg-surface p-4 rounded-lg border border-outline/10 text-center">
+            <p className="text-4xl mb-2">🔒</p>
+            <p className="font-heading text-xl text-ink">Confidentiality</p>
+            <p className="text-sm mt-1">Keeping information private</p>
+          </div>
+          <div className="bg-surface p-4 rounded-lg border border-outline/10 text-center">
+            <p className="text-4xl mb-2">✅</p>
+            <p className="font-heading text-xl text-ink">Integrity</p>
+            <p className="text-sm mt-1">Keeping information accurate</p>
+          </div>
+          <div className="bg-surface p-4 rounded-lg border border-outline/10 text-center">
+            <p className="text-4xl mb-2">⚡</p>
+            <p className="font-heading text-xl text-ink">Availability</p>
+            <p className="text-sm mt-1">Keeping systems accessible</p>
+          </div>
+        </div>
+
+        <div className="pt-4">
+          <h4 className="text-ink font-heading text-2xl mb-4">Why is the CIA Triad Important?</h4>
+          <p className="mb-4">
+            The CIA Triad provides a simple way to understand the main objectives of cybersecurity. Instead of focusing only on preventing hackers, cybersecurity asks three important questions:
+          </p>
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Who is allowed to access the information?</li>
+            <li>Can the information be trusted?</li>
+            <li>Will the information be available when it is needed?</li>
+          </ul>
+        </div>
+
+        <div className="pt-4">
+          <h4 className="text-ink font-heading text-2xl mb-4">1. Confidentiality</h4>
+          
+          <p className="mb-3">
+            <strong className="text-ink">Confidentiality</strong> means keeping information private and ensuring that only authorized people can access it. The right information should only be seen by the right people.
+          </p>
+          
+          <div className="bg-surface/40 p-4 rounded-lg border border-outline/10 mb-3">
+            <p className="font-semibold text-ink mb-2">Everyday Example:</p>
+            <p>Most people lock their phones using a PIN, password, fingerprint, or Face ID. This prevents strangers from accessing photos, messages, emails, or banking applications.</p>
+          </div>
+          
+          <p className="font-semibold text-ink mb-2">How is Confidentiality Protected?</p>
+          <ul className="list-disc pl-5 space-y-1">
+            <li><strong className="text-ink">Strong Passwords:</strong> Make it difficult for attackers to guess or crack accounts</li>
+            <li><strong className="text-ink">Multi-Factor Authentication (MFA):</strong> Users verify identity using OTP, fingerprint, or other methods</li>
+            <li><strong className="text-ink">Encryption:</strong> Converts readable information into unreadable code</li>
+            <li><strong className="text-ink">Access Control:</strong> Employees receive access only to information they need</li>
+          </ul>
+        </div>
+
+        <div className="pt-4">
+          <h4 className="text-ink font-heading text-2xl mb-4">2. Integrity</h4>
+          
+          <p className="mb-3">
+            <strong className="text-ink">Integrity</strong> means ensuring that information remains accurate, complete, and trustworthy throughout its entire life. Data should not be changed unless an authorized person intentionally updates it.
+          </p>
+          
+          <div className="bg-surface/40 p-4 rounded-lg border border-outline/10 mb-3">
+            <p className="font-semibold text-ink mb-2">Everyday Example:</p>
+            <p>If your university uploads your examination results and someone illegally changes your marks from 92 to 42, the information is still available but no longer correct. This is a failure of integrity.</p>
+          </div>
+          
+          <p className="font-semibold text-ink mb-2">How is Integrity Protected?</p>
+          <ul className="list-disc pl-5 space-y-1">
+            <li><strong className="text-ink">Hashing:</strong> Acts like a digital fingerprint; even small changes produce different hash values</li>
+            <li><strong className="text-ink">Digital Signatures:</strong> Verify information comes from a trusted sender</li>
+            <li><strong className="text-ink">Backups:</strong> Allow restoration of original versions if files are modified</li>
+            <li><strong className="text-ink">Access Permissions:</strong> Only authorized users can edit or delete information</li>
+          </ul>
+        </div>
+
+        <div className="pt-4">
+          <h4 className="text-ink font-heading text-2xl mb-4">3. Availability</h4>
+          
+          <p className="mb-3">
+            <strong className="text-ink">Availability</strong> means ensuring that systems, applications, and data remain accessible whenever authorized users need them. A secure system is of little use if users cannot access it during important moments.
+          </p>
+          
+          <div className="bg-surface/40 p-4 rounded-lg border border-outline/10 mb-3">
+            <p className="font-semibold text-ink mb-2">Everyday Example:</p>
+            <p>If your college portal crashes on the last day for submitting assignments, your data is secure but you cannot submit your work. The service is unavailable when needed.</p>
+          </div>
+          
+          <p className="font-semibold text-ink mb-2">How is Availability Protected?</p>
+          <ul className="list-disc pl-5 space-y-1">
+            <li><strong className="text-ink">Backup servers:</strong> Take over if the main server fails</li>
+            <li><strong className="text-ink">Regular maintenance:</strong> Reduces unexpected failures</li>
+            <li><strong className="text-ink">Disaster recovery plans:</strong> Recover from cyberattacks or hardware failures</li>
+            <li><strong className="text-ink">DoS/DDoS protection:</strong> Prevents systems from being overloaded</li>
+            <li><strong className="text-ink">Backup power supplies:</strong> Generators and UPS systems keep services running</li>
+          </ul>
+        </div>
+
+        <div className="pt-4">
+          <h4 className="text-ink font-heading text-2xl mb-4">How the Three Principles Work Together</h4>
+          
+          <div className="bg-accent/10 p-4 rounded-lg border border-accent/20">
+            <p className="font-semibold text-ink mb-2">Consider online banking:</p>
+            <ul className="list-disc pl-5 space-y-1">
+              <li><strong className="text-ink">Confidentiality:</strong> Your password and OTP ensure only you can access your account</li>
+              <li><strong className="text-ink">Integrity:</strong> The bank ensures your balance and transaction history remain accurate</li>
+              <li><strong className="text-ink">Availability:</strong> The banking system remains available whenever you need to transfer money</li>
+            </ul>
+            <p className="mt-3">If any one of these principles fails, the overall security of the banking system is weakened.</p>
+          </div>
+        </div>
+
+        <div className="pt-4 p-4 bg-accent/10 text-ink font-medium border border-accent/20 rounded-lg">
+          <strong className="text-accent">Key Takeaways:</strong> The CIA Triad forms the foundation of cybersecurity. Every cybersecurity technology—from passwords and encryption to firewalls and cloud security—is designed to support one or more of these principles. Understanding the CIA Triad is the first step toward understanding cybersecurity itself.
+        </div>
+      </div>
+    ),
+    game: {
+      type: 'quiz',
+      question: 'You notice that someone has illegally changed your examination marks from 92 to 42 on the university portal. The marks are still available to view, but they are incorrect. Which pillar of the CIA Triad has been compromised?',
+      options: ['Confidentiality', 'Integrity', 'Availability', 'Authentication'],
+      correctAnswerIndex: 1,
+      explanation: 'This is a failure of Integrity. Integrity ensures information remains accurate and trustworthy. Even though the information is still available (Availability) and no unauthorized person necessarily viewed it (Confidentiality), the data itself has been altered without authorization.'
+    }
+  },
+  {
     id: "04",
     title: "Building Your First Smart App",
     description: "Combine your coding skills and a little bit of AI to build a simple app that can understand what you type.",
