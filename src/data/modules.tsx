@@ -1052,6 +1052,156 @@ export const MODULES: ModuleData[] = [
       options: ['Generates realistic images from text prompts.', 'Extracts and understands text from images or scanned documents.', 'Translates languages in real-time.', 'Optimizes code for faster performance.'],
       correctAnswerIndex: 1
     }
+  },
+  {
+    id: "12",
+    title: "Zero-Day Vulnerabilities: Hidden Threats",
+    description: "Discover the most dangerous cybersecurity threats—unknown flaws that attackers exploit before developers can fix them.",
+    expandedContent: (
+      <div className="space-y-4 text-on-surface-variant font-body">
+        <p>
+          <strong className="text-ink">Zero-Day Vulnerabilities</strong> are hidden security flaws in software that are unknown to the developer. Because nobody knows the vulnerability exists, there is no security patch available to fix it.
+        </p>
+        <p className="italic text-ink/70">
+          The name "Zero-Day" means developers have had zero days to identify, investigate, and repair the vulnerability before attackers begin exploiting it.
+        </p>
+
+        <div className="pt-4">
+          <h4 className="text-ink font-heading text-2xl mb-4">Understanding the Difference</h4>
+          
+          <div className="grid sm:grid-cols-3 gap-4">
+            <div className="bg-surface p-4 rounded-lg border border-outline/10">
+              <p className="font-heading text-lg text-ink mb-2">Vulnerability</p>
+              <p className="text-sm">The actual flaw or weakness in the software—a hidden crack that nobody has noticed yet.</p>
+            </div>
+            <div className="bg-surface p-4 rounded-lg border border-outline/10">
+              <p className="font-heading text-lg text-ink mb-2">Exploit</p>
+              <p className="text-sm">The method, program, or code created by an attacker to take advantage of the weakness.</p>
+            </div>
+            <div className="bg-surface p-4 rounded-lg border border-outline/10">
+              <p className="font-heading text-lg text-ink mb-2">Attack</p>
+              <p className="text-sm">The actual action of using the exploit to compromise a computer, network, or application.</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="pt-4">
+          <h4 className="text-ink font-heading text-2xl mb-4">A Simple Analogy</h4>
+          
+          <div className="bg-surface/40 p-4 rounded-lg border border-outline/10">
+            <p>Imagine your house has a secret door that even the builder forgot about.</p>
+            <ul className="list-disc pl-5 mt-2 space-y-1">
+              <li><strong className="text-ink">The hidden door</strong> = The vulnerability</li>
+              <li><strong className="text-ink">The lock-picking tools</strong> = The exploit</li>
+              <li><strong className="text-ink">The burglary itself</strong> = The attack</li>
+            </ul>
+            <p className="mt-2">Only after the theft does the homeowner discover the secret entrance and install proper protection.</p>
+          </div>
+        </div>
+
+        <div className="pt-4">
+          <h4 className="text-ink font-heading text-2xl mb-4">Why Are Zero-Days So Dangerous?</h4>
+          
+          <div className="space-y-3">
+            <div className="bg-surface p-4 rounded-lg border border-outline/10">
+              <p>Since nobody knows the vulnerability exists, there is no official fix available.</p>
+            </div>
+            <div className="bg-surface p-4 rounded-lg border border-outline/10">
+              <p>Attackers can steal confidential information, install malware, or gain complete control of a computer.</p>
+            </div>
+            <div className="bg-surface p-4 rounded-lg border border-outline/10">
+              <p>Traditional antivirus software may not recognize the attack since it has never been seen before.</p>
+            </div>
+            <div className="bg-surface p-4 rounded-lg border border-outline/10">
+              <p>The longer a zero-day remains undiscovered, the greater the potential damage.</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="pt-4">
+          <h4 className="text-ink font-heading text-2xl mb-4">How a Zero-Day Attack Works</h4>
+          
+          <ol className="list-decimal pl-5 space-y-3">
+            <li><strong className="text-ink">A Software Bug Exists:</strong> While developing software, programmers accidentally introduce a security flaw.</li>
+            <li><strong className="text-ink">Someone Discovers the Weakness:</strong> Either a security researcher (who reports it) or a cybercriminal (who exploits it).</li>
+            <li><strong className="text-ink">An Exploit is Developed:</strong> The attacker creates code to use the vulnerability.</li>
+            <li><strong className="text-ink">Systems Are Attacked:</strong> Before any update is available, attackers begin targeting users.</li>
+            <li><strong className="text-ink">The Vulnerability is Discovered:</strong> Unusual behavior is noticed and investigated.</li>
+            <li><strong className="text-ink">A Patch is Released:</strong> The software company develops a security update.</li>
+          </ol>
+        </div>
+
+        <div className="pt-4">
+          <h4 className="text-ink font-heading text-2xl mb-4">Who Uses Zero-Days?</h4>
+          
+          <div className="grid sm:grid-cols-2 gap-4">
+            <div className="bg-surface p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Cybercriminals:</strong> Financial gain through data theft and ransomware.</p>
+            </div>
+            <div className="bg-surface p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Nation-State Attackers:</strong> Cyber espionage and intelligence gathering.</p>
+            </div>
+            <div className="bg-surface p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Hacktivists:</strong> Promoting political causes by disrupting organizations.</p>
+            </div>
+            <div className="bg-surface p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Advanced Persistent Threats (APTs):</strong> Highly organized groups that remain hidden while stealing data.</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="pt-4">
+          <h4 className="text-ink font-heading text-2xl mb-4">How to Defend Against Zero-Days</h4>
+          
+          <div className="space-y-3">
+            <div className="bg-surface/40 p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Install Updates Quickly:</strong> Once a patch becomes available, install it immediately.</p>
+            </div>
+            <div className="bg-surface/40 p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Use Modern Endpoint Security:</strong> Advanced antivirus and EDR solutions monitor suspicious behavior.</p>
+            </div>
+            <div className="bg-surface/40 p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Follow Least Privilege:</strong> Users should have only minimum permissions necessary.</p>
+            </div>
+            <div className="bg-surface/40 p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Monitor Network Activity:</strong> Detect unusual behavior that may indicate an attack.</p>
+            </div>
+            <div className="bg-surface/40 p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Maintain Regular Backups:</strong> Restore data if attackers encrypt or damage files.</p>
+            </div>
+            <div className="bg-surface/40 p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Train Employees:</strong> Many zero-day attacks begin with phishing emails.</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="pt-6">
+          <div className="bg-accent/10 p-6 rounded-lg border-2 border-accent/30">
+            <h4 className="text-ink font-heading text-xl mb-3 flex items-center gap-2">
+              <span>🧠</span> Brain Teaser
+            </h4>
+            <p className="text-on-surface-variant font-body mb-4">
+              A security researcher discovers a critical flaw in a popular web browser that allows attackers to run malicious code just by having users visit a specially crafted website. No one, including the browser developer, knows about this vulnerability yet.
+            </p>
+            <div className="space-y-2">
+              <p className="font-semibold text-ink">What stage of the zero-day process is this? Is this a vulnerability, an exploit, or an attack?</p>
+              <p className="text-sm text-ink/70">Think about: The definition of each term and whether the code has been used yet.</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="pt-4 p-4 bg-accent/10 text-ink font-medium border border-accent/20 rounded-lg">
+          <strong>Key Takeaway:</strong> In cybersecurity, it is impossible to eliminate every vulnerability. The goal is to discover and respond to them faster than attackers can exploit them.
+        </div>
+      </div>
+    ),
+    game: {
+      type: 'quiz',
+      question: 'A security researcher discovers a critical flaw in a popular web browser that allows attackers to run malicious code just by having users visit a specially crafted website. No one knows about this vulnerability yet. What is this called?',
+      options: ['A zero-day vulnerability', 'A known vulnerability', 'A zero-day exploit', 'A zero-day attack'],
+      correctAnswerIndex: 0,
+      explanation: 'This is a zero-day vulnerability—the hidden weakness itself. It becomes a zero-day exploit when an attacker creates code to use the vulnerability, and it becomes a zero-day attack when that exploit is actually used against victims. Since the flaw exists but no one is using it yet, it is a vulnerability.'
+    }
   }
 ]
 
