@@ -1384,6 +1384,212 @@ export const MODULES: ModuleData[] = [
       correctAnswerIndex: 0,
       explanation: 'This is a data breach caused by misconfigured cloud settings. Under the Shared Responsibility Model, the cloud provider secures the infrastructure, but the customer is responsible for configuring security settings correctly. The company accidentally made the storage folder accessible when it should have been private.'
     }
+  },
+  {
+    id: "14",
+    title: "Cyber Attack Surface",
+    description: "Understand where cyber attacks can happen—digital, physical, and human entry points.",
+    expandedContent: (
+      <div className="space-y-4 text-on-surface-variant font-body">
+        <p>
+          <strong className="text-ink">Cyber Attack Surface</strong> is the collection of all possible entry points where an attacker can attempt to enter, attack, or steal information from a system.
+        </p>
+        <p className="italic text-ink/70">
+          Every device, application, user account, cloud service, and network connection adds another part to the attack surface.
+        </p>
+
+        <div className="pt-4">
+          <h4 className="text-ink font-heading text-2xl mb-4">Why Understanding the Attack Surface Matters</h4>
+          
+          <div className="bg-surface/40 p-4 rounded-lg border border-outline/10">
+            <p>Imagine two houses:</p>
+            <div className="grid sm:grid-cols-2 gap-4 mt-2">
+              <div>
+                <p className="font-semibold text-ink">House 1 (Secure)</p>
+                <ul className="list-disc pl-4 text-sm mt-1 space-y-1">
+                  <li>One door with strong lock</li>
+                  <li>One window</li>
+                  <li>Security cameras</li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-semibold text-ink">House 2 (Vulnerable)</p>
+                <ul className="list-disc pl-4 text-sm mt-1 space-y-1">
+                  <li>Five doors</li>
+                  <li>Twenty windows</li>
+                  <li>Open garage, broken fence</li>
+                </ul>
+              </div>
+            </div>
+            <p className="mt-2">The second house has many more entry points, making it easier to break into. Computer systems work the same way.</p>
+          </div>
+        </div>
+
+        <div className="pt-4">
+          <h4 className="text-ink font-heading text-2xl mb-4">Three Types of Attack Surfaces</h4>
+          
+          <div className="space-y-3">
+            <div className="bg-surface p-4 rounded-lg border border-outline/10">
+              <p className="font-heading text-lg text-ink">1. Digital Attack Surface</p>
+              <p className="text-sm mt-1">Everything connected to a network or internet:</p>
+              <ul className="list-disc pl-4 text-sm mt-1 space-y-1">
+                <li>Websites, mobile applications, cloud storage</li>
+                <li>Email servers, databases, APIs</li>
+                <li>User accounts, Wi-Fi networks, software</li>
+              </ul>
+            </div>
+            <div className="bg-surface p-4 rounded-lg border border-outline/10">
+              <p className="font-heading text-lg text-ink">2. Physical Attack Surface</p>
+              <p className="text-sm mt-1">Actual hardware and equipment:</p>
+              <ul className="list-disc pl-4 text-sm mt-1 space-y-1">
+                <li>Laptops, desktop computers, servers</li>
+                <li>USB drives, hard disks, routers</li>
+                <li>Security cameras, employee ID cards</li>
+              </ul>
+            </div>
+            <div className="bg-surface p-4 rounded-lg border border-outline/10">
+              <p className="font-heading text-lg text-ink">3. Human Attack Surface</p>
+              <p className="text-sm mt-1">People who interact with the system:</p>
+              <ul className="list-disc pl-4 text-sm mt-1 space-y-1">
+                <li>Employees, contractors, users, customers</li>
+                <li>Targets of phishing, social engineering</li>
+                <li>People who click suspicious links</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div className="pt-4">
+          <h4 className="text-ink font-heading text-2xl mb-4">Common Entry Points Used by Attackers</h4>
+          
+          <div className="grid sm:grid-cols-2 gap-3">
+            <div className="bg-surface/40 p-3 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Weak Passwords</strong></p>
+              <p className="text-sm">Simple passwords like 123456 are easy to guess.</p>
+            </div>
+            <div className="bg-surface/40 p-3 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Outdated Software</strong></p>
+              <p className="text-sm">Older applications contain known vulnerabilities.</p>
+            </div>
+            <div className="bg-surface/40 p-3 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Phishing Emails</strong></p>
+              <p className="text-sm">Users tricked into revealing credentials.</p>
+            </div>
+            <div className="bg-surface/40 p-3 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Public Wi-Fi</strong></p>
+              <p className="text-sm">Attackers intercept network traffic.</p>
+            </div>
+            <div className="bg-surface/40 p-3 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Misconfigured Cloud</strong></p>
+              <p className="text-sm">Storage accidentally left publicly accessible.</p>
+            </div>
+            <div className="bg-surface/40 p-3 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">USB Devices</strong></p>
+              <p className="text-sm">Infected drives auto-install malware.</p>
+            </div>
+            <div className="bg-surface/40 p-3 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Unsecured APIs</strong></p>
+              <p className="text-sm">Poorly protected interfaces expose data.</p>
+            </div>
+            <div className="bg-surface/40 p-3 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">IoT Devices</strong></p>
+              <p className="text-sm">Smart devices often have weak security.</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="pt-4">
+          <h4 className="text-ink font-heading text-2xl mb-4">Real-World Example</h4>
+          
+          <div className="bg-accent/10 p-4 rounded-lg border border-accent/20">
+            <p>A company with 500 employees has:</p>
+            <ul className="list-disc pl-4 text-sm mt-1 space-y-1">
+              <li>500 laptops and 600 employee accounts</li>
+              <li>Website, mobile app, cloud storage</li>
+              <li>Email servers, Wi-Fi, security cameras</li>
+              <li>APIs connected to payment systems</li>
+            </ul>
+            <p className="mt-2">One employee clicks a phishing email and enters their password on a fake login page. The attacker uses those credentials to access cloud storage.</p>
+            <p className="mt-1"><strong>The servers were secure, but the attacker entered through the human attack surface.</strong></p>
+          </div>
+        </div>
+
+        <div className="pt-4">
+          <h4 className="text-ink font-heading text-2xl mb-4">How to Reduce the Attack Surface</h4>
+          
+          <div className="space-y-3">
+            <div className="bg-surface p-3 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Remove Unnecessary Software:</strong> Uninstall applications that are not used—they add potential vulnerabilities.</p>
+            </div>
+            <div className="bg-surface p-3 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Keep Systems Updated:</strong> Install security patches to close known vulnerabilities.</p>
+            </div>
+            <div className="bg-surface p-3 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Use Strong Authentication:</strong> Passwords combined with MFA make unauthorized access difficult.</p>
+            </div>
+            <div className="bg-surface p-3 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Limit User Permissions:</strong> Follow Principle of Least Privilege—users access only what they need.</p>
+            </div>
+            <div className="bg-surface p-3 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Secure Cloud Resources:</strong> Configure storage, databases, and APIs correctly.</p>
+            </div>
+            <div className="bg-surface p-3 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Employee Training:</strong> Teach staff to identify phishing and social engineering.</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="pt-4">
+          <h4 className="text-ink font-heading text-2xl mb-4">Attack Surface vs Vulnerability</h4>
+          
+          <div className="grid sm:grid-cols-2 gap-4">
+            <div className="bg-surface p-4 rounded-lg border border-outline/10">
+              <p className="font-heading text-lg text-ink">Attack Surface</p>
+              <p className="text-sm mt-1">All possible entry points into a system:</p>
+              <ul className="list-disc pl-4 text-sm mt-1 space-y-1">
+                <li>Devices, applications, users, networks, cloud services</li>
+              </ul>
+            </div>
+            <div className="bg-surface p-4 rounded-lg border border-outline/10">
+              <p className="font-heading text-lg text-ink">Vulnerability</p>
+              <p className="text-sm mt-1">A specific weakness within an entry point:</p>
+              <ul className="list-disc pl-4 text-sm mt-1 space-y-1">
+                <li>Weak passwords, outdated software, programming bugs</li>
+              </ul>
+            </div>
+          </div>
+          <div className="mt-3 bg-surface/20 p-3 rounded-lg border border-outline/10">
+            <p className="text-sm"><strong>Analogy:</strong> Doors and windows = attack surface. An unlocked window = vulnerability. The attacker chooses a window (attack surface) and notices it is unlocked (vulnerability).</p>
+          </div>
+        </div>
+
+        <div className="pt-6">
+          <div className="bg-accent/10 p-6 rounded-lg border-2 border-accent/30">
+            <h4 className="text-ink font-heading text-xl mb-3 flex items-center gap-2">
+              <span>🧠</span> Brain Teaser
+            </h4>
+            <p className="text-on-surface-variant font-body mb-4">
+              A hospital has recently installed smart medical devices, allowed remote work for all staff, adopted three new cloud services, and enabled patients to book appointments through a mobile app. The IT team notices that cyber attacks have increased significantly.
+            </p>
+            <div className="space-y-2">
+              <p className="font-semibold text-ink">Which type of attack surface has expanded the most, and what should the hospital do to reduce its risk?</p>
+              <p className="text-sm text-ink/70">Think about: How each new technology affects the attack surface.</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="pt-4 p-4 bg-accent/10 text-ink font-medium border border-accent/20 rounded-lg">
+          <strong>Key Takeaway:</strong> Before you can protect a system, you must first understand where it can be attacked. The larger the attack surface, the more opportunities attackers have. Reducing the attack surface by removing unnecessary technology, applying updates, limiting permissions, and training employees makes it significantly harder for cybercriminals to find weaknesses.
+        </div>
+      </div>
+    ),
+    game: {
+      type: 'quiz',
+      question: 'A hospital recently installed smart medical devices, enabled remote work, adopted cloud services, and launched a patient mobile app. Cyber attacks increased significantly. Which attack surface expanded the most and what should the hospital do?',
+      options: ['Physical attack surface; replace all smart devices', 'Digital attack surface; reduce technology use and secure remaining systems', 'Human attack surface; fire employees who click phishing emails', 'All attack surfaces expanded; implement defense-in-depth'],
+      correctAnswerIndex: 3,
+      explanation: 'All three attack surfaces expanded: digital (cloud, app, devices), physical (more devices to steal), and human (remote workers targeted by phishing). The hospital should implement a comprehensive strategy including security updates, strong authentication, access controls, and employee training—defense-in-depth across all surfaces.'
+    }
   }
 ]
 
