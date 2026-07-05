@@ -1202,6 +1202,188 @@ export const MODULES: ModuleData[] = [
       correctAnswerIndex: 0,
       explanation: 'This is a zero-day vulnerability—the hidden weakness itself. It becomes a zero-day exploit when an attacker creates code to use the vulnerability, and it becomes a zero-day attack when that exploit is actually used against victims. Since the flaw exists but no one is using it yet, it is a vulnerability.'
     }
+  },
+  {
+    id: "13",
+    title: "Cloud Security and SaaS",
+    description: "Learn how to protect data, applications, and services in cloud computing environments.",
+    expandedContent: (
+      <div className="space-y-4 text-on-surface-variant font-body">
+        <p>
+          <strong className="text-ink">Cloud computing</strong> is the delivery of computing services—including servers, storage, databases, networking, software, and analytics—over the internet instead of using local computers or personal servers.
+        </p>
+        <p>
+          When you upload a file to Google Drive or send an email through Gmail, the file is stored on Google's cloud servers, allowing you to access it from any device with an internet connection.
+        </p>
+
+        <div className="pt-4">
+          <h4 className="text-ink font-heading text-2xl mb-4">Common Cloud Services</h4>
+          
+          <div className="grid sm:grid-cols-3 gap-3">
+            <div className="bg-surface p-3 rounded-lg border border-outline/10 text-center">
+              <p className="text-2xl mb-1">📁</p>
+              <p className="text-sm">Storage</p>
+              <p className="text-xs text-ink/70">Google Drive, Dropbox</p>
+            </div>
+            <div className="bg-surface p-3 rounded-lg border border-outline/10 text-center">
+              <p className="text-2xl mb-1">📧</p>
+              <p className="text-sm">Email</p>
+              <p className="text-xs text-ink/70">Gmail, Outlook</p>
+            </div>
+            <div className="bg-surface p-3 rounded-lg border border-outline/10 text-center">
+              <p className="text-2xl mb-1">📹</p>
+              <p className="text-sm">Collaboration</p>
+              <p className="text-xs text-ink/70">Teams, Google Docs</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="pt-4">
+          <h4 className="text-ink font-heading text-2xl mb-4">What is SaaS?</h4>
+          
+          <p className="mb-3">
+            <strong className="text-ink">Software as a Service (SaaS)</strong> is a cloud computing model where software is delivered over the internet instead of being installed on your computer. You simply open a web browser, log in, and start using the application.
+          </p>
+          
+          <div className="bg-surface/40 p-4 rounded-lg border border-outline/10">
+            <p className="font-semibold text-ink mb-2">Examples of SaaS:</p>
+            <ul className="list-disc pl-5 space-y-1">
+              <li>Gmail, Google Docs, Microsoft 365</li>
+              <li>Zoom, Slack, Canva</li>
+              <li>Netflix, Salesforce, Dropbox</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="pt-4">
+          <h4 className="text-ink font-heading text-2xl mb-4">Why Organizations Use Cloud Services</h4>
+          
+          <div className="grid sm:grid-cols-2 gap-3">
+            <div className="bg-surface p-4 rounded-lg border border-outline/10">
+              <p className="font-semibold text-ink">Cost Savings</p>
+              <p className="text-sm">No need to purchase expensive servers or maintain data centers.</p>
+            </div>
+            <div className="bg-surface p-4 rounded-lg border border-outline/10">
+              <p className="font-semibold text-ink">Easy Access</p>
+              <p className="text-sm">Access applications and files from anywhere with internet.</p>
+            </div>
+            <div className="bg-surface p-4 rounded-lg border border-outline/10">
+              <p className="font-semibold text-ink">Scalability</p>
+              <p className="text-sm">Increase or decrease computing resources depending on demand.</p>
+            </div>
+            <div className="bg-surface p-4 rounded-lg border border-outline/10">
+              <p className="font-semibold text-ink">Automatic Updates</p>
+              <p className="text-sm">Cloud providers regularly update software automatically.</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="pt-4">
+          <h4 className="text-ink font-heading text-2xl mb-4">Cloud Security Risks</h4>
+          
+          <div className="space-y-3">
+            <div className="bg-surface/40 p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Data Breaches:</strong> Unauthorized access to confidential information stored in the cloud.</p>
+            </div>
+            <div className="bg-surface/40 p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Misconfigured Settings:</strong> Accidentally making cloud storage publicly accessible.</p>
+            </div>
+            <div className="bg-surface/40 p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Weak Access Controls:</strong> Users having more permissions than necessary for their work.</p>
+            </div>
+            <div className="bg-surface/40 p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Insecure APIs:</strong> Poorly designed APIs that attackers exploit to access data.</p>
+            </div>
+            <div className="bg-surface/40 p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Account Hijacking:</strong> Attackers stealing credentials through phishing to gain full access.</p>
+            </div>
+            <div className="bg-surface/40 p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Insider Threats:</strong> Employees or contractors intentionally or accidentally exposing data.</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="pt-4">
+          <h4 className="text-ink font-heading text-2xl mb-4">How to Secure Cloud Environments</h4>
+          
+          <div className="space-y-3">
+            <div className="bg-surface p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Strong Passwords:</strong> Create long, unique passwords that are difficult to guess.</p>
+            </div>
+            <div className="bg-surface p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Multi-Factor Authentication (MFA):</strong> Even if attackers steal a password, they cannot log in without the second factor.</p>
+            </div>
+            <div className="bg-surface p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Encryption:</strong> Encrypt sensitive data both at rest and in transit.</p>
+            </div>
+            <div className="bg-surface p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Access Control:</strong> Follow the Principle of Least Privilege—users get only necessary permissions.</p>
+            </div>
+            <div className="bg-surface p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Regular Updates:</strong> Keep applications and devices updated with security patches.</p>
+            </div>
+            <div className="bg-surface p-4 rounded-lg border border-outline/10">
+              <p><strong className="text-ink">Continuous Monitoring:</strong> Monitor cloud activity for unusual behavior or unauthorized access.</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="pt-4">
+          <h4 className="text-ink font-heading text-2xl mb-4">Shared Responsibility Model</h4>
+          
+          <div className="bg-accent/10 p-4 rounded-lg border border-accent/20">
+            <p className="mb-3">Cloud security is a shared responsibility between the cloud provider and the customer:</p>
+            
+            <div className="grid sm:grid-cols-2 gap-4 mt-3">
+              <div className="bg-surface p-3 rounded-lg border border-outline/10">
+                <p className="font-semibold text-ink">Cloud Provider Responsible For:</p>
+                <ul className="list-disc pl-4 text-sm mt-1 space-y-1">
+                  <li>Physical security of data centers</li>
+                  <li>Server hardware</li>
+                  <li>Network infrastructure</li>
+                  <li>Cloud platform availability</li>
+                </ul>
+              </div>
+              <div className="bg-surface p-3 rounded-lg border border-outline/10">
+                <p className="font-semibold text-ink">Customer Responsible For:</p>
+                <ul className="list-disc pl-4 text-sm mt-1 space-y-1">
+                  <li>Creating strong passwords</li>
+                  <li>Managing user accounts</li>
+                  <li>Configuring security settings</li>
+                  <li>Protecting uploaded data</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="pt-6">
+          <div className="bg-accent/10 p-6 rounded-lg border-2 border-accent/30">
+            <h4 className="text-ink font-heading text-xl mb-3 flex items-center gap-2">
+              <span>🧠</span> Brain Teaser
+            </h4>
+            <p className="text-on-surface-variant font-body mb-4">
+              A company stores all employee salary records on a cloud platform. An employee accidentally discovers that by guessing a URL, they can view confidential salary information that belongs to other employees. The cloud provider's servers are secure, but the company had misconfigured the storage folder's permissions.
+            </p>
+            <div className="space-y-2">
+              <p className="font-semibold text-ink">What cloud security risk is this, and which party is responsible for fixing it?</p>
+              <p className="text-sm text-ink/70">Think about: The Shared Responsibility Model and common configuration problems.</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="pt-4 p-4 bg-accent/10 text-ink font-medium border border-accent/20 rounded-lg">
+          <strong>Key Takeaway:</strong> Cloud providers secure the infrastructure, but customers are responsible for protecting their accounts, configuring security settings correctly, and safeguarding their own data. Understanding the Shared Responsibility Model is essential for every cybersecurity professional.
+        </div>
+      </div>
+    ),
+    game: {
+      type: 'quiz',
+      question: 'A company stores confidential employee records on a cloud platform. Due to a misconfiguration, anyone with the link can access these files. The cloud provider\'s infrastructure is secure, but the company set incorrect permissions. Which cloud security risk is this and who is responsible?',
+      options: ['Data breach caused by misconfigured settings; the customer is responsible', 'Data breach caused by insecure APIs; the cloud provider is responsible', 'Account hijacking; the employee is responsible', 'Hardware failure; the cloud provider is responsible'],
+      correctAnswerIndex: 0,
+      explanation: 'This is a data breach caused by misconfigured cloud settings. Under the Shared Responsibility Model, the cloud provider secures the infrastructure, but the customer is responsible for configuring security settings correctly. The company accidentally made the storage folder accessible when it should have been private.'
+    }
   }
 ]
 
