@@ -3,6 +3,7 @@ import img2 from "../assets/img-2.png"
 import img3 from "../assets/img-3.png"
 import chefImg from "../assets/confused_chef.png"
 import bakerImg from "../assets/baker_cookies.png"
+import designFlowImg from "../assets/design_flow.png"
 import React from "react"
 
 export type GameData = 
@@ -770,17 +771,17 @@ export const MODULES: ModuleData[] = [
 
         <div className="grid sm:grid-cols-3 gap-4">
           <div className="bg-surface p-4 rounded-lg border border-outline/10 text-center">
-            <p className="text-4xl mb-2">🔒</p>
+            <p className="text-4xl mb-2"></p>
             <p className="font-heading text-xl text-ink">Confidentiality</p>
             <p className="text-sm mt-1">Keeping information private</p>
           </div>
           <div className="bg-surface p-4 rounded-lg border border-outline/10 text-center">
-            <p className="text-4xl mb-2">✅</p>
+            <p className="text-4xl mb-2"></p>
             <p className="font-heading text-xl text-ink">Integrity</p>
             <p className="text-sm mt-1">Keeping information accurate</p>
           </div>
           <div className="bg-surface p-4 rounded-lg border border-outline/10 text-center">
-            <p className="text-4xl mb-2">⚡</p>
+            <p className="text-4xl mb-2"></p>
             <p className="font-heading text-xl text-ink">Availability</p>
             <p className="text-sm mt-1">Keeping systems accessible</p>
           </div>
@@ -1178,7 +1179,7 @@ export const MODULES: ModuleData[] = [
         <div className="pt-6">
           <div className="bg-accent/10 p-6 rounded-lg border-2 border-accent/30">
             <h4 className="text-ink font-heading text-xl mb-3 flex items-center gap-2">
-              <span>🧠</span> Brain Teaser
+              <span></span> Brain Teaser
             </h4>
             <p className="text-on-surface-variant font-body mb-4">
               A security researcher discovers a critical flaw in a popular web browser that allows attackers to run malicious code just by having users visit a specially crafted website. No one, including the browser developer, knows about this vulnerability yet.
@@ -1221,17 +1222,17 @@ export const MODULES: ModuleData[] = [
           
           <div className="grid sm:grid-cols-3 gap-3">
             <div className="bg-surface p-3 rounded-lg border border-outline/10 text-center">
-              <p className="text-2xl mb-1">📁</p>
+              <p className="text-2xl mb-1"></p>
               <p className="text-sm">Storage</p>
               <p className="text-xs text-ink/70">Google Drive, Dropbox</p>
             </div>
             <div className="bg-surface p-3 rounded-lg border border-outline/10 text-center">
-              <p className="text-2xl mb-1">📧</p>
+              <p className="text-2xl mb-1"></p>
               <p className="text-sm">Email</p>
               <p className="text-xs text-ink/70">Gmail, Outlook</p>
             </div>
             <div className="bg-surface p-3 rounded-lg border border-outline/10 text-center">
-              <p className="text-2xl mb-1">📹</p>
+              <p className="text-2xl mb-1"></p>
               <p className="text-sm">Collaboration</p>
               <p className="text-xs text-ink/70">Teams, Google Docs</p>
             </div>
@@ -1360,7 +1361,7 @@ export const MODULES: ModuleData[] = [
         <div className="pt-6">
           <div className="bg-accent/10 p-6 rounded-lg border-2 border-accent/30">
             <h4 className="text-ink font-heading text-xl mb-3 flex items-center gap-2">
-              <span>🧠</span> Brain Teaser
+              <span></span> Brain Teaser
             </h4>
             <p className="text-on-surface-variant font-body mb-4">
               A company stores all employee salary records on a cloud platform. An employee accidentally discovers that by guessing a URL, they can view confidential salary information that belongs to other employees. The cloud provider's servers are secure, but the company had misconfigured the storage folder's permissions.
@@ -1566,7 +1567,7 @@ export const MODULES: ModuleData[] = [
         <div className="pt-6">
           <div className="bg-accent/10 p-6 rounded-lg border-2 border-accent/30">
             <h4 className="text-ink font-heading text-xl mb-3 flex items-center gap-2">
-              <span>🧠</span> Brain Teaser
+              <span></span> Brain Teaser
             </h4>
             <p className="text-on-surface-variant font-body mb-4">
               A hospital has recently installed smart medical devices, allowed remote work for all staff, adopted three new cloud services, and enabled patients to book appointments through a mobile app. The IT team notices that cyber attacks have increased significantly.
@@ -1599,6 +1600,13 @@ export const MODULES: ModuleData[] = [
         <p>
           Designing a product is like solving a puzzle where you guide data from its raw form to a polished result. In this module, we explore the core lifecycle:
         </p>
+
+        <div className="w-full flex justify-center py-4">
+          <div className="w-full max-w-2xl relative transition-transform duration-500 hover:scale-[1.02]" style={{ borderRadius: '16px' }}>
+            <div className="absolute inset-0 bg-accent/20 opacity-0 hover:opacity-100 transition-opacity duration-500 blur-xl rounded-2xl"></div>
+            <img src={designFlowImg} alt="Design Flow Illustration" className="w-full h-auto object-cover relative z-10 shadow-xl shadow-black/30 rounded-2xl border border-outline/20" />
+          </div>
+        </div>
         
         <div className="space-y-3">
           <div className="bg-surface p-4 rounded-lg border border-outline/10">

@@ -83,7 +83,7 @@ export function TechWordle({ levels }: TechWordleProps) {
   }
 
   // function to get letter status
-  const getLetterStatus = (letter: string, i: number, guess: string) => {
+  const getLetterStatus = (letter: string, i: number) => {
     if (word[i] === letter) return 'correct'
     if (word.includes(letter)) return 'present'
     return 'absent'
@@ -94,7 +94,7 @@ export function TechWordle({ levels }: TechWordleProps) {
     for (const guess of guesses) {
       for (let i = 0; i < WORD_LENGTH; i++) {
         if (guess[i] === key) {
-          const letterStatus = getLetterStatus(key, i, guess)
+          const letterStatus = getLetterStatus(key, i)
           if (letterStatus === 'correct') return 'correct'
           if (letterStatus === 'present' && status !== 'correct') status = 'present'
           if (letterStatus === 'absent' && status === 'default') status = 'absent'
@@ -128,7 +128,7 @@ export function TechWordle({ levels }: TechWordleProps) {
                 let bgClass = "bg-surface/50 border-outline/30"
                 
                 if (guess) {
-                  const status = getLetterStatus(char, colIndex, guess)
+                  const status = getLetterStatus(char, colIndex)
                   if (status === 'correct') bgClass = "bg-[#10b981]/20 text-[#10b981] border-[#10b981]/50"
                   else if (status === 'present') bgClass = "bg-[#f59e0b]/20 text-[#f59e0b] border-[#f59e0b]/50"
                   else bgClass = "bg-surface text-on-surface-variant border-outline/10"

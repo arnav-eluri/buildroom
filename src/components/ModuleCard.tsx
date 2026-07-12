@@ -10,7 +10,7 @@ interface ModuleCardProps {
   expandedContent?: React.ReactNode
 }
 
-export function ModuleCard({ id, title, description, index, expandedContent }: ModuleCardProps) {
+export function ModuleCard({ id, title, description, expandedContent }: ModuleCardProps) {
   const navigate = useNavigate()
 
   const handleClick = () => {
