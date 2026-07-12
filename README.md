@@ -7,6 +7,14 @@
   <img src="./public/banner.png" alt="BuildRoom Logo" width="100%" />
 </div>
 
+## What We've Built So Far
+We have developed a 100% web-based educational platform using React and Vite, designed to introduce beginners to AI and Software. The platform currently features interactive modules covering:
+- Fundamentals of Software and AI
+- Cybersecurity and Threat Defense
+- Hands-on AI Chatbot creation using the Gemini API
+- Prompt Engineering (Context & Constraints)
+- Optical Character Recognition (OCR)
+
 ## The Adventure Awaits
 We believe that learning to build apps and AI should feel like a superpower. BuildRoom takes you on a guided journey through:
 
@@ -18,8 +26,6 @@ We believe that learning to build apps and AI should feel like a superpower. Bui
 - **Cybersecurity Threats & Defense:** Explore network attacks and defense strategies.
 - **Context & Constraints:** Learn how to control AI outputs using well-structured prompts.
 - **Reading Between the Lines with OCR:** Learn how computers can read text from images.
-
-
 ## How It Works
 BuildRoom is a 100% web-based educational platform. There is no software to download or install! 
 

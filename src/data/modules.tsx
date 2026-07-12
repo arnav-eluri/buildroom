@@ -1588,7 +1588,44 @@ export const MODULES: ModuleData[] = [
       question: 'A hospital recently installed smart medical devices, enabled remote work, adopted cloud services, and launched a patient mobile app. Cyber attacks increased significantly. Which attack surface expanded the most and what should the hospital do?',
       options: ['Physical attack surface; replace all smart devices', 'Digital attack surface; reduce technology use and secure remaining systems', 'Human attack surface; fire employees who click phishing emails', 'All attack surfaces expanded; implement defense-in-depth'],
       correctAnswerIndex: 3,
-      explanation: 'All three attack surfaces expanded: digital (cloud, app, devices), physical (more devices to steal), and human (remote workers targeted by phishing). The hospital should implement a comprehensive strategy including security updates, strong authentication, access controls, and employee training—defense-in-depth across all surfaces.'
+    }
+  },
+  {
+    id: "10",
+    title: "Design Flow",
+    description: "Understand the journey of a product from Input to Output, exploring everything that happens in between.",
+    expandedContent: (
+      <div className="space-y-4 text-on-surface-variant font-body">
+        <p>
+          Designing a product is like solving a puzzle where you guide data from its raw form to a polished result. In this module, we explore the core lifecycle:
+        </p>
+        
+        <div className="space-y-3">
+          <div className="bg-surface p-4 rounded-lg border border-outline/10">
+            <p><strong className="text-ink text-lg">1. Input</strong></p>
+            <p>Where the data originates (e.g., user clicks, typed text, uploaded images).</p>
+          </div>
+          <div className="bg-surface p-4 rounded-lg border border-outline/10">
+            <p><strong className="text-ink text-lg">2. Processing (The "In-Between")</strong></p>
+            <p>Where the magic happens. Data is transformed, analyzed, or stored (e.g., AI models generating a response, algorithms sorting data).</p>
+          </div>
+          <div className="bg-surface p-4 rounded-lg border border-outline/10">
+            <p><strong className="text-ink text-lg">3. Output</strong></p>
+            <p>The final result presented to the user (e.g., a visual dashboard, a chat reply, an alert).</p>
+          </div>
+        </div>
+
+        <div className="pt-4 p-4 bg-accent/10 text-ink font-medium border border-accent/20 rounded-lg">
+          <strong>Key Takeaway:</strong> Every app you use is constantly cycling through Input, Processing, and Output. Mastering this flow is the key to designing great software!
+        </div>
+      </div>
+    ),
+    game: {
+      type: 'quiz',
+      question: 'Imagine you are building a smart doorbell. The camera captures a video feed of a visitor. Which stage of the Design Flow is this?',
+      options: ['Input', 'Processing', 'Output', 'Storage'],
+      correctAnswerIndex: 0,
+      explanation: 'Capturing the video feed is gathering raw data, which makes it the Input stage. Processing would be analyzing the face, and Output would be playing a greeting sound.'
     }
   }
 ]
