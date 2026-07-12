@@ -5,6 +5,7 @@ import chefImg from "../assets/confused_chef.png"
 import bakerImg from "../assets/baker_cookies.png"
 import designFlowImg from "../assets/design_flow.png"
 import React from "react"
+import { MermaidDiagram } from "../components/MermaidDiagram"
 
 export type GameData = 
   | { type: 'wordle'; levels: { word: string; hint?: string }[] }
@@ -1620,6 +1621,37 @@ export const MODULES: ModuleData[] = [
           <div className="bg-surface p-4 rounded-lg border border-outline/10">
             <p><strong className="text-ink text-lg">3. Output</strong></p>
             <p>The final result presented to the user (e.g., a visual dashboard, a chat reply, an alert).</p>
+          </div>
+        </div>
+
+        <div className="pt-6">
+          <h4 className="text-ink font-heading text-xl mb-4">Flow Examples</h4>
+          
+          <div className="bg-surface p-6 rounded-xl border border-outline/10 mb-4 shadow-sm">
+            <p className="mb-4 font-semibold text-ink text-lg">Example 1: Smart Doorbell</p>
+            <MermaidDiagram chart={`
+              graph LR
+              A[Camera Image] -->|Input| B(AI Face Match)
+              B -->|Output| C[Play Greeting]
+              style A fill:#0f172a,stroke:#3b82f6,color:#e2e8f0
+              style B fill:#0f172a,stroke:#8b5cf6,color:#e2e8f0
+              style C fill:#0f172a,stroke:#10b981,color:#e2e8f0
+            `} />
+          </div>
+
+          <div className="bg-surface p-6 rounded-xl border border-outline/10 mb-4 shadow-sm">
+            <p className="mb-4 font-semibold text-ink text-lg">Example 2: AI Chatbot (Like ChatGPT)</p>
+            <MermaidDiagram chart={`
+              sequenceDiagram
+              actor User
+              participant Interface
+              participant AI_Model
+              User->>Interface: Type Question (Input)
+              Interface->>AI_Model: Send Text
+              Note over AI_Model: Processing Data...
+              AI_Model-->>Interface: Generate Response
+              Interface->>User: Display Answer (Output)
+            `} />
           </div>
         </div>
 
