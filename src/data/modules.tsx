@@ -927,7 +927,7 @@ export const MODULES: ModuleData[] = [
     }
   },
   {
-    id: "10",
+    id: "15",
     title: "The Art of Context & Constraints",
     description: "Learn how to control AI outputs using well-structured prompts and improve response quality from LLMs through practical interaction.",
     expandedContent: (
@@ -1592,7 +1592,7 @@ export const MODULES: ModuleData[] = [
     }
   },
   {
-    id: "10",
+    id: "16",
     title: "Design Flow",
     description: "Understand the journey of a product from Input to Output, exploring everything that happens in between.",
     expandedContent: (
